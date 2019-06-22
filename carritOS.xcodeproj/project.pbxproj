@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6190A048CF4DB2E2583AE0C /* Pods_carritOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */; };
+		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
+		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
+		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
+		F4D67AF722BDFE3600E1132F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF622BDFE3600E1132F /* Assets.xcassets */; };
+		F4D67AFA22BDFE3600E1132F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF822BDFE3600E1132F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carritOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C025940C218445EEF223E4 /* Pods-carritOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carritOS.release.xcconfig"; path = "Target Support Files/Pods-carritOS/Pods-carritOS.release.xcconfig"; sourceTree = "<group>"; };
+		EAB7C9DC5FA0C3B2BEF8E980 /* Pods-carritOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carritOS.debug.xcconfig"; path = "Target Support Files/Pods-carritOS/Pods-carritOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4D67AF422BDFE3400E1132F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4D67AF622BDFE3600E1132F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4D67AF922BDFE3600E1132F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4D67AFB22BDFE3600E1132F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4D67AE922BDFE3400E1132F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6190A048CF4DB2E2583AE0C /* Pods_carritOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDE77BCD904303163A6F13A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB7C9DC5FA0C3B2BEF8E980 /* Pods-carritOS.debug.xcconfig */,
+				47C025940C218445EEF223E4 /* Pods-carritOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F475538611C486A79C67AB31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4D67AE322BDFE3400E1132F = {
+			isa = PBXGroup;
+			children = (
+				F4D67AEE22BDFE3400E1132F /* carritOS */,
+				F4D67AED22BDFE3400E1132F /* Products */,
+				CDE77BCD904303163A6F13A1 /* Pods */,
+				F475538611C486A79C67AB31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4D67AED22BDFE3400E1132F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4D67AEC22BDFE3400E1132F /* carritOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4D67AEE22BDFE3400E1132F /* carritOS */ = {
+			isa = PBXGroup;
+			children = (
+				F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */,
+				F4D67AF122BDFE3400E1132F /* ViewController.swift */,
+				F4D67AF322BDFE3400E1132F /* Main.storyboard */,
+				F4D67AF622BDFE3600E1132F /* Assets.xcassets */,
+				F4D67AF822BDFE3600E1132F /* LaunchScreen.storyboard */,
+				F4D67AFB22BDFE3600E1132F /* Info.plist */,
+			);
+			path = carritOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4D67AEB22BDFE3400E1132F /* carritOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4D67AFE22BDFE3600E1132F /* Build configuration list for PBXNativeTarget "carritOS" */;
+			buildPhases = (
+				7660DD3B2577FB4441544324 /* [CP] Check Pods Manifest.lock */,
+				F4D67AE822BDFE3400E1132F /* Sources */,
+				F4D67AE922BDFE3400E1132F /* Frameworks */,
+				F4D67AEA22BDFE3400E1132F /* Resources */,
+				C7543B4CB86AF2F235F3D39C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carritOS;
+			productName = carritOS;
+			productReference = F4D67AEC22BDFE3400E1132F /* carritOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4D67AE422BDFE3400E1132F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = KcomtAlosilla;
+				TargetAttributes = {
+					F4D67AEB22BDFE3400E1132F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F4D67AE722BDFE3400E1132F /* Build configuration list for PBXProject "carritOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4D67AE322BDFE3400E1132F;
+			productRefGroup = F4D67AED22BDFE3400E1132F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4D67AEB22BDFE3400E1132F /* carritOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4D67AEA22BDFE3400E1132F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D67AFA22BDFE3600E1132F /* LaunchScreen.storyboard in Resources */,
+				F4D67AF722BDFE3600E1132F /* Assets.xcassets in Resources */,
+				F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7660DD3B2577FB4441544324 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carritOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7543B4CB86AF2F235F3D39C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carritOS/Pods-carritOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carritOS/Pods-carritOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carritOS/Pods-carritOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4D67AE822BDFE3400E1132F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */,
+				F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4D67AF322BDFE3400E1132F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4D67AF422BDFE3400E1132F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4D67AF822BDFE3600E1132F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4D67AF922BDFE3600E1132F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4D67AFC22BDFE3600E1132F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4D67AFD22BDFE3600E1132F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4D67AFF22BDFE3600E1132F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB7C9DC5FA0C3B2BEF8E980 /* Pods-carritOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8468U436K8;
+				INFOPLIST_FILE = carritOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = upc.carritOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4D67B0022BDFE3600E1132F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47C025940C218445EEF223E4 /* Pods-carritOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8468U436K8;
+				INFOPLIST_FILE = carritOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = upc.carritOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4D67AE722BDFE3400E1132F /* Build configuration list for PBXProject "carritOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4D67AFC22BDFE3600E1132F /* Debug */,
+				F4D67AFD22BDFE3600E1132F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D67AFE22BDFE3600E1132F /* Build configuration list for PBXNativeTarget "carritOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4D67AFF22BDFE3600E1132F /* Debug */,
+				F4D67B0022BDFE3600E1132F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4D67AE422BDFE3400E1132F /* Project object */;
+}
