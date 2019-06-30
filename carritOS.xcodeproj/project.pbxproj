@@ -3,11 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C6190A048CF4DB2E2583AE0C /* Pods_carritOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */; };
+		F435BDA822BECDB500084B0B /* FoodTruck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435BDA722BECDB500084B0B /* FoodTruck.swift */; };
+		F435BDAA22BECDC900084B0B /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435BDA922BECDC900084B0B /* Contract.swift */; };
+		F435BDAC22BECDE900084B0B /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435BDAB22BECDE900084B0B /* Review.swift */; };
+		F435BDAE22BECE7D00084B0B /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435BDAD22BECE7D00084B0B /* Sale.swift */; };
+		F43B00B322C59949007E07EB /* foodTruckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00B222C59949007E07EB /* foodTruckCell.swift */; };
+		F43B00B522C5A0D8007E07EB /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00B422C5A0D8007E07EB /* mainViewController.swift */; };
+		F43B00B822C5E1C7007E07EB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43B00B722C5E1C7007E07EB /* Alamofire.framework */; };
+		F43B00BA22C5E1ED007E07EB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00B922C5E1ED007E07EB /* API.swift */; };
+		F43B00BE22C6BD58007E07EB /* foodTruckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00BD22C6BD58007E07EB /* foodTruckResponse.swift */; };
+		F43B00C022C6E16F007E07EB /* BuisnessOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */; };
+		F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */; };
+		F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C622C7E81C007E07EB /* detailViewController.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -19,6 +31,18 @@
 		40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carritOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C025940C218445EEF223E4 /* Pods-carritOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carritOS.release.xcconfig"; path = "Target Support Files/Pods-carritOS/Pods-carritOS.release.xcconfig"; sourceTree = "<group>"; };
 		EAB7C9DC5FA0C3B2BEF8E980 /* Pods-carritOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carritOS.debug.xcconfig"; path = "Target Support Files/Pods-carritOS/Pods-carritOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F435BDA722BECDB500084B0B /* FoodTruck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruck.swift; sourceTree = "<group>"; };
+		F435BDA922BECDC900084B0B /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		F435BDAB22BECDE900084B0B /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		F435BDAD22BECE7D00084B0B /* Sale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
+		F43B00B222C59949007E07EB /* foodTruckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTruckCell.swift; sourceTree = "<group>"; };
+		F43B00B422C5A0D8007E07EB /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		F43B00B722C5E1C7007E07EB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43B00B922C5E1ED007E07EB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F43B00BD22C6BD58007E07EB /* foodTruckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTruckResponse.swift; sourceTree = "<group>"; };
+		F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisnessOwner.swift; sourceTree = "<group>"; };
+		F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buisnessOwnerResponse.swift; sourceTree = "<group>"; };
+		F43B00C622C7E81C007E07EB /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43B00B822C5E1C7007E07EB /* Alamofire.framework in Frameworks */,
 				C6190A048CF4DB2E2583AE0C /* Pods_carritOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,13 +71,46 @@
 				EAB7C9DC5FA0C3B2BEF8E980 /* Pods-carritOS.debug.xcconfig */,
 				47C025940C218445EEF223E4 /* Pods-carritOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F435BDA022BEBE2500084B0B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F43B00B922C5E1ED007E07EB /* API.swift */,
+				F43B00BD22C6BD58007E07EB /* foodTruckResponse.swift */,
+				F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F435BDA622BEC98E00084B0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F435BDA722BECDB500084B0B /* FoodTruck.swift */,
+				F435BDA922BECDC900084B0B /* Contract.swift */,
+				F435BDAB22BECDE900084B0B /* Review.swift */,
+				F435BDAD22BECE7D00084B0B /* Sale.swift */,
+				F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F43B00B122C594D5007E07EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */,
+				F4D67AF122BDFE3400E1132F /* ViewController.swift */,
+				F43B00B422C5A0D8007E07EB /* mainViewController.swift */,
+				F43B00C622C7E81C007E07EB /* detailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F475538611C486A79C67AB31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F43B00B722C5E1C7007E07EB /* Alamofire.framework */,
 				40C0D497C3CB74914D90EE01 /* Pods_carritOS.framework */,
 			);
 			name = Frameworks;
@@ -79,12 +137,14 @@
 		F4D67AEE22BDFE3400E1132F /* carritOS */ = {
 			isa = PBXGroup;
 			children = (
-				F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */,
-				F4D67AF122BDFE3400E1132F /* ViewController.swift */,
+				F43B00B122C594D5007E07EB /* Controllers */,
+				F435BDA622BEC98E00084B0B /* Models */,
+				F435BDA022BEBE2500084B0B /* Network */,
 				F4D67AF322BDFE3400E1132F /* Main.storyboard */,
 				F4D67AF622BDFE3600E1132F /* Assets.xcassets */,
 				F4D67AF822BDFE3600E1132F /* LaunchScreen.storyboard */,
 				F4D67AFB22BDFE3600E1132F /* Info.plist */,
+				F43B00B222C59949007E07EB /* foodTruckCell.swift */,
 			);
 			path = carritOS;
 			sourceTree = "<group>";
@@ -205,7 +265,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */,
+				F43B00C022C6E16F007E07EB /* BuisnessOwner.swift in Sources */,
+				F43B00B522C5A0D8007E07EB /* mainViewController.swift in Sources */,
+				F43B00BE22C6BD58007E07EB /* foodTruckResponse.swift in Sources */,
 				F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */,
+				F435BDAA22BECDC900084B0B /* Contract.swift in Sources */,
+				F435BDAE22BECE7D00084B0B /* Sale.swift in Sources */,
+				F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */,
+				F435BDA822BECDB500084B0B /* FoodTruck.swift in Sources */,
+				F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */,
+				F435BDAC22BECDE900084B0B /* Review.swift in Sources */,
+				F43B00BA22C5E1ED007E07EB /* API.swift in Sources */,
+				F43B00B322C59949007E07EB /* foodTruckCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
