@@ -10,13 +10,14 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class FoodTruck : Codable
+class FoodTruck : NSObject, Codable, MKAnnotation
 {
     var id: Int = 1
     var name: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var buisnessOwnerId: BuisnessOwner
+    var phoneNumber: String = ""
     
     @objc var title: String?
     @objc var subtitle: String?

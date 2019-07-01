@@ -26,7 +26,7 @@ import Foundation
                 do {
                     let decoder = JSONDecoder()
                     if let data = response.data {
-                        print(1)
+                        print(response)
                         let gitData = try decoder.decode([FoodTruck].self, from: data)
                         print(gitData[0].name)
                         print(gitData[0].latitude)

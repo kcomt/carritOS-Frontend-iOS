@@ -12,23 +12,16 @@ import MapKit
 class detailViewController: UIViewController
 {
 
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     var selectedFoodTruck: FoodTruck?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstView.alpha = 1
+        secondView.alpha = 0
         self.navigationItem.title=selectedFoodTruck?.name
-        print(self.selectedFoodTruck?.latitude)
-        print(self.selectedFoodTruck?.latitude)
-        print(self.selectedFoodTruck?.longitude)
-        centerMap(CLLocation(latitude: selectedFoodTruck!.latitude, longitude: selectedFoodTruck!.longitude))
-    }
-    
-    func centerMap( _ location: CLLocation){
-        let coordinateRegion = MKCoordinateRegion(center: selectedFoodTruck!.coordinate, latitudinalMeters: 1000,longitudinalMeters: 1000)
-        mapView.setRegion(coordinateRegion, animated: true)
+
     }
     
     @IBAction func switchView(_ sender: UISegmentedControl) {
@@ -40,5 +33,18 @@ class detailViewController: UIViewController
             firstView.alpha = 0
             secondView.alpha = 1
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embedMap" {
+            if let childVC = segue.destination as? mapController {
+                //Some property on ChildVC that needs to be set
+                childVC.selectedFoodTruck = selectedFoodTruck
+            }
+        }
+    }
+    @IBAction func call(_ sender: UIBarButtonItem) {
+        guard let textphoneLabel = selectedFoodTruck?.phoneNumber else {return}
+        guard let number = URL(string: "tel://" + textphoneLabel) else { return }
+        UIApplication.shared.open(number)
     }
 }
