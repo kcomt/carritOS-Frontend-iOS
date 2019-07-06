@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Review : Codable
+{
+    var id: Int = 1
+    var comment: String = ""
+    var qualification: Int = 0
+    var consumerId: BuisnessOwner
+    var foodTruckId: FoodTruck
+    var date: String = ""
+}

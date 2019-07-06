@@ -22,6 +22,8 @@
 		F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C622C7E81C007E07EB /* detailViewController.swift */; };
 		F43B00C922C9798D007E07EB /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C822C9798D007E07EB /* mapController.swift */; };
 		F45E021522D158F200C1E13A /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021422D158F200C1E13A /* Consumer.swift */; };
+		F45E021722D15EEF00C1E13A /* reviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021622D15EEE00C1E13A /* reviewCell.swift */; };
+		F45E021922D15FFC00C1E13A /* reviewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021822D15FFC00C1E13A /* reviewTableController.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		F43B00C622C7E81C007E07EB /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		F43B00C822C9798D007E07EB /* mapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
 		F45E021422D158F200C1E13A /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
+		F45E021622D15EEE00C1E13A /* reviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewCell.swift; sourceTree = "<group>"; };
+		F45E021822D15FFC00C1E13A /* reviewTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewTableController.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				F43B00B422C5A0D8007E07EB /* mainViewController.swift */,
 				F43B00C622C7E81C007E07EB /* detailViewController.swift */,
 				F43B00C822C9798D007E07EB /* mapController.swift */,
+				F45E021822D15FFC00C1E13A /* reviewTableController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				F4D67AF822BDFE3600E1132F /* LaunchScreen.storyboard */,
 				F4D67AFB22BDFE3600E1132F /* Info.plist */,
 				F43B00B222C59949007E07EB /* foodTruckCell.swift */,
+				F45E021622D15EEE00C1E13A /* reviewCell.swift */,
 			);
 			path = carritOS;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				F45E021522D158F200C1E13A /* Consumer.swift in Sources */,
 				F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */,
 				F43B00C022C6E16F007E07EB /* BuisnessOwner.swift in Sources */,
+				F45E021922D15FFC00C1E13A /* reviewTableController.swift in Sources */,
 				F43B00B522C5A0D8007E07EB /* mainViewController.swift in Sources */,
 				F43B00BE22C6BD58007E07EB /* foodTruckResponse.swift in Sources */,
 				F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */,
@@ -283,6 +290,7 @@
 				F435BDA822BECDB500084B0B /* FoodTruck.swift in Sources */,
 				F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */,
 				F435BDAC22BECDE900084B0B /* Review.swift in Sources */,
+				F45E021722D15EEF00C1E13A /* reviewCell.swift in Sources */,
 				F43B00BA22C5E1ED007E07EB /* API.swift in Sources */,
 				F43B00B322C59949007E07EB /* foodTruckCell.swift in Sources */,
 			);

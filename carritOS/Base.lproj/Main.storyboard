@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="height" constant="400" id="1Fa-na-oFQ"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="rWj-CG-jEa" kind="embed" id="T1f-TF-B6j"/>
+                                    <segue destination="rWj-CG-jEa" kind="embed" identifier="embedTable" id="T1f-TF-B6j"/>
                                 </connections>
                             </containerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Gi-Rg-Qg2">
@@ -253,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="861" y="97"/>
         </scene>
-        <!--View Controller-->
+        <!--Review Table Controller-->
         <scene sceneID="Qu9-pj-pqr">
             <objects>
-                <viewController id="rWj-CG-jEa" sceneMemberID="viewController">
+                <viewController id="rWj-CG-jEa" customClass="reviewTableController" customModule="carritOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qnJ-ZP-gfG">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +264,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHh-6t-vvD">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="306"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="mYb-V7-pNs" customClass="reviewCell" customModule="carritOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mYb-V7-pNs" id="tCt-M9-BKh">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rne-zd-VG1">
+                                                    <rect key="frame" x="23" y="19" width="42" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rne-zd-VG1" firstAttribute="top" secondItem="tCt-M9-BKh" secondAttribute="topMargin" constant="8" id="MBb-4C-7Pf"/>
+                                                <constraint firstItem="Rne-zd-VG1" firstAttribute="leading" secondItem="tCt-M9-BKh" secondAttribute="leadingMargin" constant="8" id="deN-lY-L1O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Rne-zd-VG1" secondAttribute="bottom" constant="8" id="v7F-cg-Dzk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="Rne-zd-VG1" id="tg1-e5-4mc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB7-IW-CcK">
                                 <rect key="frame" x="224" y="338" width="55" height="30"/>
@@ -287,6 +313,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N0W-q3-LXm"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jHh-6t-vvD" id="77T-Ib-3SE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hf-3E-4bS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
