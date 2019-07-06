@@ -21,6 +21,7 @@
 		F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */; };
 		F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C622C7E81C007E07EB /* detailViewController.swift */; };
 		F43B00C922C9798D007E07EB /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B00C822C9798D007E07EB /* mapController.swift */; };
+		F45E021522D158F200C1E13A /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021422D158F200C1E13A /* Consumer.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buisnessOwnerResponse.swift; sourceTree = "<group>"; };
 		F43B00C622C7E81C007E07EB /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		F43B00C822C9798D007E07EB /* mapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
+		F45E021422D158F200C1E13A /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				F435BDAB22BECDE900084B0B /* Review.swift */,
 				F435BDAD22BECE7D00084B0B /* Sale.swift */,
 				F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */,
+				F45E021422D158F200C1E13A /* Consumer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45E021522D158F200C1E13A /* Consumer.swift in Sources */,
 				F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */,
 				F43B00C022C6E16F007E07EB /* BuisnessOwner.swift in Sources */,
 				F43B00B522C5A0D8007E07EB /* mainViewController.swift in Sources */,

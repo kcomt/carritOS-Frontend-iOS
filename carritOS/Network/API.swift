@@ -43,4 +43,8 @@ import Foundation
 
     }
     
+    static func getReviews(){
+        
+    }
+    
 }
