@@ -16,7 +16,7 @@ import Foundation
     static let baseUrlString = "https://carritos-backend.herokuapp.com"
     static let foodTrucksUrlString = "\(baseUrlString)/foodTrucks/ordered"
     static let buisnessOwnerUrlString = "\(baseUrlString)/buisnessOwners"
-    static let reviewsUrlString = "\(baseUrlString)/reviews/"
+    static let reviewsUrlString = "\(baseUrlString)/reviews/foodTruck/"
     
     static func getFoodTrucks(result:@escaping (_ list:[FoodTruck]) -> Void){
         var list: [FoodTruck]  = [FoodTruck]()
@@ -27,7 +27,6 @@ import Foundation
                 do {
                     let decoder = JSONDecoder()
                     if let data = response.data {
-                        print(response)
                         let gitData = try decoder.decode([FoodTruck].self, from: data)
                         print(gitData[0].name)
                         print(gitData[0].latitude)
@@ -46,17 +45,19 @@ import Foundation
     
     static func getReviews(id: String, result:@escaping (_ list:[Review]) -> Void){
         let newUrl: String = reviewsUrlString + id
+        print(newUrl)
         var list: [Review] = [Review]()
         AF.request(newUrl).responseJSON(completionHandler: {
             response in
+            print(response)
             switch response.result {
             case .success( _):
                 do {
                     let decoder = JSONDecoder()
+                    print(response.data)
                     if let data = response.data {
-                        print(response)
                         let gitData = try decoder.decode([Review].self, from: data)
-                        print(gitData[0].comment)
+                        print(69)
                         list = gitData
                         result(list)
                     }

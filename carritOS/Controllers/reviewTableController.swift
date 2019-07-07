@@ -40,6 +40,7 @@ extension reviewTableController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(69)
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewCell
         // Configure the cell
         cell.update(from: reviews[indexPath.row])
