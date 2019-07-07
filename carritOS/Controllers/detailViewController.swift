@@ -41,7 +41,14 @@ class detailViewController: UIViewController
                 childVC.selectedFoodTruck = selectedFoodTruck
             }
         }
+        if segue.identifier == "embedTable" {
+            if let childVC2 = segue.destination as? reviewTableController {
+                //Some property on ChildVC that needs to be set
+                childVC2.selectedFoodTruck = selectedFoodTruck
+            }
+        }
     }
+    
     @IBAction func call(_ sender: UIBarButtonItem) {
         guard let textphoneLabel = selectedFoodTruck?.phoneNumber else {return}
         guard let number = URL(string: "tel://" + textphoneLabel) else { return }

@@ -11,23 +11,40 @@ import UIKit
 import os
 
 class reviewTableController: UIViewController{
-    
+    var reviews: [Review] = [Review]()
+    var selectedFoodTruck: FoodTruck?
+    var id: String = ""
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(selectedFoodTruck!.name)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func loadReviews(){
+        API.getReviews(id: String(selectedFoodTruck!.id)){ list in
+            self.reviews = list
+            self.tableView.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadReviews()
     }
 }
 
 extension reviewTableController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewCell
+        // Configure the cell
+        cell.update(from: reviews[indexPath.row])
+        
+        return cell
     }
     
     
