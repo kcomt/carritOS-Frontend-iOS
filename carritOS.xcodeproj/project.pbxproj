@@ -102,13 +102,13 @@
 		F435BDA622BEC98E00084B0B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F45E021E22D2F31600C1E13A /* Token.swift */,
 				F435BDA722BECDB500084B0B /* FoodTruck.swift */,
 				F435BDA922BECDC900084B0B /* Contract.swift */,
 				F435BDAB22BECDE900084B0B /* Review.swift */,
 				F435BDAD22BECE7D00084B0B /* Sale.swift */,
 				F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */,
 				F45E021422D158F200C1E13A /* Consumer.swift */,
-				F45E021E22D2F31600C1E13A /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

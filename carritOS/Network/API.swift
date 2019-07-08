@@ -74,7 +74,7 @@ import Foundation
         })
     }
     
-    static func login(username: String, password: String){
+    static func loginConsumer(username: String, password: String){
         let loginRequest = [
             "username" : username,
             "password" : password
@@ -89,6 +89,10 @@ import Foundation
                         let gitData = try decoder.decode(Token.self, from: data)
                         API.instance.token = gitData.token
                         API.instance.isAuthenticated = true
+                        var clienJSON = API.instance.decode(jwtToken: API.instance.token)
+                        print(clienJSON)
+                        var clientName = clienJSON["sub"]
+                        print(clientName)
                     }
                 } catch {
                     print(error)

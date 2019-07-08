@@ -17,10 +17,9 @@ class loginConsumerController: UIViewController{
     }
     
     @IBAction func login(_ sender: UIButton) {
-        API.login(username: usernameTextField.text!, password: passwordTextFIeld.text!)
+        API.loginConsumer(username: usernameTextField.text!, password: passwordTextFIeld.text!)
         print(API.instance.token)
-        var x = API.instance.decodeJWTPart(API.instance.token)
-        print(x)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
