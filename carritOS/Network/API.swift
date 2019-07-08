@@ -28,6 +28,9 @@ import Foundation
     
     static let consumerByUsernameUrlString = "\(baseUrlString)/consumers/safe/username/"
     static let buisnessOwnerByUsernameUrlString = "\(baseUrlString)/buisnessOwners/safe/username/"
+    
+    static let foodTrucksByOwnerIdUrlString = "\(baseUrlString)/foodTrucks/owner/"
+    
     static let loginUrlString = "\(baseUrlString)/authenticate"
     static let postReviewUrlString = "\(baseUrlString)/reviews/"
     
@@ -116,6 +119,34 @@ import Foundation
                         let gitData = try decoder.decode(BuisnessOwner.self, from: data)
                         buisnessOwner = gitData
                         result(buisnessOwner)
+                    }
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
+        
+    }
+    
+    static func getFoodTrucksByOwnerId(name: String,result:@escaping (_ list:[FoodTruck]) -> Void){
+        var list: [FoodTruck]  = [FoodTruck]()
+        let newUrl = foodTrucksByOwnerIdUrlString + name
+        var Bearer = "Bearer " + API.instance.token
+        let headers: HTTPHeaders = [
+            "Authorization": Bearer
+        ]
+        AF.request(newUrl, headers: headers).responseJSON(completionHandler: {
+            response in
+            switch response.result {
+            case .success( _):
+                do {
+                    let decoder = JSONDecoder()
+                    if let data = response.data {
+                        let gitData = try decoder.decode([FoodTruck].self, from: data)
+                        list = gitData
+                        result(list)
                     }
                 } catch {
                     print(error)

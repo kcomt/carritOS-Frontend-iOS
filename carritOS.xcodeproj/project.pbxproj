@@ -29,6 +29,11 @@
 		F45E021F22D2F31600C1E13A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021E22D2F31600C1E13A /* Token.swift */; };
 		F45E022522D333B200C1E13A /* addReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022422D333B200C1E13A /* addReviewController.swift */; };
 		F45E022722D361BB00C1E13A /* tabBarLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022622D361BB00C1E13A /* tabBarLogin.swift */; };
+		F45E022922D3785B00C1E13A /* foodTruckCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022822D3785B00C1E13A /* foodTruckCell2.swift */; };
+		F45E022B22D378D000C1E13A /* foodTruckAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022A22D378D000C1E13A /* foodTruckAdminController.swift */; };
+		F45E022D22D378E300C1E13A /* reviewAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022C22D378E300C1E13A /* reviewAdminController.swift */; };
+		F45E022F22D378F300C1E13A /* sellerAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022E22D378F300C1E13A /* sellerAdminController.swift */; };
+		F45E023122D3810900C1E13A /* adminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E023022D3810900C1E13A /* adminController.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -61,6 +66,11 @@
 		F45E021E22D2F31600C1E13A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F45E022422D333B200C1E13A /* addReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addReviewController.swift; sourceTree = "<group>"; };
 		F45E022622D361BB00C1E13A /* tabBarLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarLogin.swift; sourceTree = "<group>"; };
+		F45E022822D3785B00C1E13A /* foodTruckCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTruckCell2.swift; sourceTree = "<group>"; };
+		F45E022A22D378D000C1E13A /* foodTruckAdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTruckAdminController.swift; sourceTree = "<group>"; };
+		F45E022C22D378E300C1E13A /* reviewAdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewAdminController.swift; sourceTree = "<group>"; };
+		F45E022E22D378F300C1E13A /* sellerAdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sellerAdminController.swift; sourceTree = "<group>"; };
+		F45E023022D3810900C1E13A /* adminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminController.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +139,10 @@
 				F45E021C22D2CB4700C1E13A /* loginConsumerController.swift */,
 				F45E022422D333B200C1E13A /* addReviewController.swift */,
 				F45E022622D361BB00C1E13A /* tabBarLogin.swift */,
+				F45E022A22D378D000C1E13A /* foodTruckAdminController.swift */,
+				F45E022C22D378E300C1E13A /* reviewAdminController.swift */,
+				F45E022E22D378F300C1E13A /* sellerAdminController.swift */,
+				F45E023022D3810900C1E13A /* adminController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 				F4D67AFB22BDFE3600E1132F /* Info.plist */,
 				F43B00B222C59949007E07EB /* foodTruckCell.swift */,
 				F45E021622D15EEE00C1E13A /* reviewCell.swift */,
+				F45E022822D3785B00C1E13A /* foodTruckCell2.swift */,
 			);
 			path = carritOS;
 			sourceTree = "<group>";
@@ -297,14 +312,17 @@
 				F45E021922D15FFC00C1E13A /* reviewTableController.swift in Sources */,
 				F43B00B522C5A0D8007E07EB /* mainViewController.swift in Sources */,
 				F43B00BE22C6BD58007E07EB /* foodTruckResponse.swift in Sources */,
+				F45E022D22D378E300C1E13A /* reviewAdminController.swift in Sources */,
 				F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */,
 				F435BDAA22BECDC900084B0B /* Contract.swift in Sources */,
 				F45E021B22D2B3CC00C1E13A /* reviewResponse.swift in Sources */,
 				F43B00C922C9798D007E07EB /* mapController.swift in Sources */,
 				F45E022522D333B200C1E13A /* addReviewController.swift in Sources */,
+				F45E022922D3785B00C1E13A /* foodTruckCell2.swift in Sources */,
 				F45E022722D361BB00C1E13A /* tabBarLogin.swift in Sources */,
 				F435BDAE22BECE7D00084B0B /* Sale.swift in Sources */,
 				F45E021F22D2F31600C1E13A /* Token.swift in Sources */,
+				F45E022F22D378F300C1E13A /* sellerAdminController.swift in Sources */,
 				F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */,
 				F435BDA822BECDB500084B0B /* FoodTruck.swift in Sources */,
 				F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */,
@@ -313,6 +331,8 @@
 				F45E021722D15EEF00C1E13A /* reviewCell.swift in Sources */,
 				F43B00BA22C5E1ED007E07EB /* API.swift in Sources */,
 				F43B00B322C59949007E07EB /* foodTruckCell.swift in Sources */,
+				F45E022B22D378D000C1E13A /* foodTruckAdminController.swift in Sources */,
+				F45E023122D3810900C1E13A /* adminController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
