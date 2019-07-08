@@ -64,6 +64,13 @@ class mainViewController: UIViewController, UISearchDisplayDelegate, UISearchBar
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func showAlert(with title: String?, message: String?){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension mainViewController: UITableViewDelegate, UITableViewDataSource{

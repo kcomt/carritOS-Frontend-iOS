@@ -18,10 +18,8 @@ import Foundation
     var isAuthenticated: Bool = false
     var token: String = ""
     
-    var consumerId: Int?
-    var buisnessOwnerId: Int?
-    var sellerId: Int?
     var consumer: Consumer?
+    var buisnessOwner: BuisnessOwner?
     
     static let baseUrlString = "https://carritos-backend.herokuapp.com"
     
@@ -29,6 +27,7 @@ import Foundation
     static let reviewsUrlString = "\(baseUrlString)/reviews/safe/foodTruck/"
     
     static let consumerByUsernameUrlString = "\(baseUrlString)/consumers/safe/username/"
+    static let buisnessOwnerByUsernameUrlString = "\(baseUrlString)/buisnessOwners/safe/username/"
     static let loginUrlString = "\(baseUrlString)/authenticate"
     static let postReviewUrlString = "\(baseUrlString)/reviews/"
     
@@ -80,8 +79,8 @@ import Foundation
         })
     }
     
-    static func getConsumerByUserName(id: String, result:@escaping (_ consumer:Consumer) -> Void){
-        let newUrl: String = consumerByUsernameUrlString + id
+    static func getConsumerByUserName(name: String, result:@escaping (_ consumer:Consumer) -> Void){
+        let newUrl: String = consumerByUsernameUrlString + name
         var consumer: Consumer  = Consumer()
         AF.request(newUrl).responseJSON(completionHandler: {
             response in
@@ -93,6 +92,30 @@ import Foundation
                         let gitData = try decoder.decode(Consumer.self, from: data)
                         consumer = gitData
                         result(consumer)
+                    }
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
+        
+    }
+    
+    static func getBuisnessOwnerByName(name: String, result:@escaping (_ buisnessOwner:BuisnessOwner) -> Void){
+        let newUrl: String = buisnessOwnerByUsernameUrlString + name
+        var buisnessOwner: BuisnessOwner  = BuisnessOwner()
+        AF.request(newUrl).responseJSON(completionHandler: {
+            response in
+            switch response.result {
+            case .success( _):
+                do {
+                    let decoder = JSONDecoder()
+                    if let data = response.data {
+                        let gitData = try decoder.decode(BuisnessOwner.self, from: data)
+                        buisnessOwner = gitData
+                        result(buisnessOwner)
                     }
                 } catch {
                     print(error)
@@ -146,11 +169,12 @@ import Foundation
         AF.request(postReviewUrlString, method: .post, parameters: reviewPost, encoding: JSONEncoding.default, headers: headers).responseJSON
     }
     
-    static func loginConsumer(username: String, password: String){
+    static func loginConsumer(username: String, password: String, result:@escaping (_ logeado:Bool) -> Void){
         let loginRequest = [
             "username" : username,
             "password" : password
         ]
+        var logeado: Bool = false
         var consumerLog: Consumer = Consumer()
         AF.request(loginUrlString, method: .post, parameters: loginRequest, encoding: JSONEncoding.default).responseJSON(completionHandler:{
             response in
@@ -164,19 +188,60 @@ import Foundation
                         API.instance.isAuthenticated = true
                         var clienJSON = API.instance.decode(jwtToken: API.instance.token)
                         let clientName = clienJSON["sub"]
-                        API.getConsumerByUserName(id: clientName as! String){ consumer in
+                        API.getConsumerByUserName(name: clientName as! String){ consumer in
                            consumerLog = consumer
-                            API.instance.consumerId = consumerLog.id
-                            API.instance.buisnessOwnerId = nil
-                            API.instance.sellerId = nil
+                            API.instance.consumer = consumerLog
+                            API.instance.buisnessOwner = nil
                             API.instance.consumer = consumer
+                            logeado = true
+                            result(logeado)
                         }
                     }
                 } catch {
                     print(error)
+                    result(logeado)
                 }
             case .failure(let error):
                 print(error)
+                result(logeado)
+            }
+        })
+    }
+    
+    static func loginBuisnessOwner(username: String, password: String, result:@escaping (_ logeado:Bool) -> Void){
+        let loginRequest = [
+            "username" : username,
+            "password" : password
+        ]
+        var logeado: Bool = false
+        var buisnessOwnerLog: BuisnessOwner = BuisnessOwner()
+        AF.request(loginUrlString, method: .post, parameters: loginRequest, encoding: JSONEncoding.default).responseJSON(completionHandler:{
+            response in
+            switch response.result{
+            case .success( _):
+                do {
+                    let decoder = JSONDecoder()
+                    if let data = response.data {
+                        let gitData = try decoder.decode(Token.self, from: data)
+                        API.instance.token = gitData.token
+                        API.instance.isAuthenticated = true
+                        var clienJSON = API.instance.decode(jwtToken: API.instance.token)
+                        let clientName = clienJSON["sub"]
+                        API.getBuisnessOwnerByName(name: clientName as! String){ buisnessO in
+                            buisnessOwnerLog = buisnessO
+                            API.instance.consumer = nil
+                            API.instance.buisnessOwner = buisnessOwnerLog
+                            logeado = true
+                            result(logeado)
+                        }
+                    }
+                } catch {
+                    print(error)
+                    result(logeado)
+                }
+            case .failure(let error):
+                print(error)
+                result(logeado)
             }
         })
     }

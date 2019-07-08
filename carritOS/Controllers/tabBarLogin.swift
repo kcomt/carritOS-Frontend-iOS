@@ -26,10 +26,45 @@ class tabBarLogin: UIViewController {
     }
     
     @IBAction func loginConsumer(_ sender: UIButton) {
+        API.loginConsumer(username: usernameTextField.text!, password: passwordTextField.text!){ logeado in
+            if logeado == true{
+                    _ = self.navigationController?.popViewController(animated: true)
+                    self.showAlert(with: "Exito", message: "Se Inicio sesión de forma exitosa")
+            }
+            else{
+                OperationQueue.main.addOperation {
+                    self.showAlert(with: "Error", message: "Credenciales Incorrectos")
+                }
+            }
+        }
     }
     
     @IBAction func loginBuisnessOwner(_ sender: UIButton) {
+        API.loginBuisnessOwner(username: usernameTextField2.text!, password: passwordTextField2.text!){ logeado in
+            if logeado == true{
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "showAdmin", sender: self)
+                }
+            }
+            else{
+                OperationQueue.main.addOperation {
+                    self.showAlert(with: "Error", message: "Credenciales Incorrectos")
+                }
+            }
+        }
     }
+    
     @IBAction func loginSeller(_ sender: UIButton) {
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func showAlert(with title: String?, message: String?){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

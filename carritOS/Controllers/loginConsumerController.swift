@@ -17,9 +17,15 @@ class loginConsumerController: UIViewController{
     }
     
     @IBAction func login(_ sender: UIButton) {
-        API.loginConsumer(username: usernameTextField.text!, password: passwordTextFIeld.text!)
-        print(API.instance.token)
-        
+        API.loginConsumer(username: usernameTextField.text!, password: passwordTextFIeld.text!){ logeado in
+            
+            if logeado == true{
+                print("Success")
+            }
+            else{
+                print("NO SUCCESS")
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
