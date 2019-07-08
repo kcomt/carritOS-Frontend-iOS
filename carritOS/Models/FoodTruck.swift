@@ -16,7 +16,7 @@ class FoodTruck : NSObject, Codable, MKAnnotation
     var name: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
-    var buisnessOwnerId: BuisnessOwner
+    var buisnessOwnerId: BuisnessOwner = BuisnessOwner()
     var phoneNumber: String = ""
     
     @objc var title: String?

@@ -47,6 +47,11 @@ class detailViewController: UIViewController
                 childVC2.selectedFoodTruck = selectedFoodTruck
             }
         }
+        if segue.identifier == "showAddReview" {
+            if let nextVC = segue.destination as? addReviewController {
+                nextVC.selectedFoodTruck = selectedFoodTruck
+            }
+        }
     }
     
     @IBAction func call(_ sender: UIBarButtonItem) {

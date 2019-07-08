@@ -56,7 +56,6 @@ class mainViewController: UIViewController, UISearchDisplayDelegate, UISearchBar
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationViewController = segue.destination as! detailViewController
                 destinationViewController.selectedFoodTruck = self.foodTrucks[indexPath.row]
-                print(indexPath.row)
                 tableView.deselectRow(at: indexPath, animated: true)
             }
         }

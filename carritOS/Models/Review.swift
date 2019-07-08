@@ -13,7 +13,7 @@ class Review : Codable
     var id: Int = 1
     var comment: String = ""
     var qualification: Int = 0
-    var consumerId: Consumer
-    var foodTruckId: FoodTruck
+    var consumerId: Consumer = Consumer()
+    var foodTruckId: FoodTruck = FoodTruck()
     var date: String = ""
 }

@@ -9,13 +9,13 @@
 import Foundation
 class BuisnessOwner : Codable
 {
-    var id: Int
-    var buisnessName: String
-    var dni: String
-    var email: String
-    var lastName: String
-    var name: String
-    var password: String
-    var rating: Int
-    var username: String
+    var id: Int = 0
+    var buisnessName: String = ""
+    var dni: String = ""
+    var email: String = ""
+    var lastName: String = ""
+    var name: String = ""
+    var password: String = ""
+    var rating: Int = 0
+    var username: String = ""
 }

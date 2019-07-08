@@ -17,12 +17,20 @@ import Foundation
     
     var isAuthenticated: Bool = false
     var token: String = ""
-
+    
+    var consumerId: Int?
+    var buisnessOwnerId: Int?
+    var sellerId: Int?
+    var consumer: Consumer?
+    
     static let baseUrlString = "https://carritos-backend.herokuapp.com"
-    static let foodTrucksUrlString = "\(baseUrlString)/foodTrucks/ordered"
-    static let buisnessOwnerUrlString = "\(baseUrlString)/buisnessOwners"
-    static let reviewsUrlString = "\(baseUrlString)/reviews/foodTruck/"
+    
+    static let foodTrucksUrlString = "\(baseUrlString)/foodTrucks/safe/ordered"
+    static let reviewsUrlString = "\(baseUrlString)/reviews/safe/foodTruck/"
+    
+    static let consumerByUsernameUrlString = "\(baseUrlString)/consumers/safe/username/"
     static let loginUrlString = "\(baseUrlString)/authenticate"
+    static let postReviewUrlString = "\(baseUrlString)/reviews/"
     
     static func getFoodTrucks(result:@escaping (_ list:[FoodTruck]) -> Void){
         var list: [FoodTruck]  = [FoodTruck]()
@@ -51,11 +59,9 @@ import Foundation
     
     static func getReviews(id: String, result:@escaping (_ list:[Review]) -> Void){
         let newUrl: String = reviewsUrlString + id
-        print(newUrl)
         var list: [Review] = [Review]()
         AF.request(newUrl).responseJSON(completionHandler: {
             response in
-            print(response)
             switch response.result {
             case .success( _):
                 do {
@@ -74,11 +80,78 @@ import Foundation
         })
     }
     
+    static func getConsumerByUserName(id: String, result:@escaping (_ consumer:Consumer) -> Void){
+        let newUrl: String = consumerByUsernameUrlString + id
+        var consumer: Consumer  = Consumer()
+        AF.request(newUrl).responseJSON(completionHandler: {
+            response in
+            switch response.result {
+            case .success( _):
+                do {
+                    let decoder = JSONDecoder()
+                    if let data = response.data {
+                        let gitData = try decoder.decode(Consumer.self, from: data)
+                        consumer = gitData
+                        result(consumer)
+                    }
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
+        
+    }
+    
+    static func saveReview(review: Review)
+    {
+        let reviewPost = [
+            "comment": review.comment,
+            "qualification": review.qualification,
+            "consumerId": [
+                "id": review.consumerId.id,
+                "email": review.consumerId.email,
+                "name": review.consumerId.name,
+                "password": review.consumerId.password,
+                "username": review.consumerId.username
+            ],
+            "foodTruckId": [
+                "id": review.foodTruckId.id,
+                "name": review.foodTruckId.name,
+                "latitude": review.foodTruckId.latitude,
+                "longitude": review.foodTruckId.longitude,
+                "buisnessOwnerId": [
+                    "id": review.foodTruckId.buisnessOwnerId.id,
+                    "buisnessName": review.foodTruckId.buisnessOwnerId.buisnessName,
+                    "dni": review.foodTruckId.buisnessOwnerId.dni,
+                    "email": review.foodTruckId.buisnessOwnerId.email,
+                    "lastName": review.foodTruckId.buisnessOwnerId.lastName,
+                    "name": review.foodTruckId.buisnessOwnerId.name,
+                    "password": review.foodTruckId.buisnessOwnerId.password,
+                    "rating": review.foodTruckId.buisnessOwnerId.rating,
+                    "username": review.foodTruckId.buisnessOwnerId.username
+                ],
+                "phoneNumber": review.foodTruckId.phoneNumber
+            ],
+            "date": review.date
+            ] as [String : Any]
+        
+        print(API.instance.token)
+        var Bearer = "Bearer " + API.instance.token
+        let headers: HTTPHeaders = [
+            "Authorization": Bearer
+        ]
+        
+        AF.request(postReviewUrlString, method: .post, parameters: reviewPost, encoding: JSONEncoding.default, headers: headers).responseJSON
+    }
+    
     static func loginConsumer(username: String, password: String){
         let loginRequest = [
             "username" : username,
             "password" : password
         ]
+        var consumerLog: Consumer = Consumer()
         AF.request(loginUrlString, method: .post, parameters: loginRequest, encoding: JSONEncoding.default).responseJSON(completionHandler:{
             response in
             switch response.result{
@@ -90,9 +163,14 @@ import Foundation
                         API.instance.token = gitData.token
                         API.instance.isAuthenticated = true
                         var clienJSON = API.instance.decode(jwtToken: API.instance.token)
-                        print(clienJSON)
-                        var clientName = clienJSON["sub"]
-                        print(clientName)
+                        let clientName = clienJSON["sub"]
+                        API.getConsumerByUserName(id: clientName as! String){ consumer in
+                           consumerLog = consumer
+                            API.instance.consumerId = consumerLog.id
+                            API.instance.buisnessOwnerId = nil
+                            API.instance.sellerId = nil
+                            API.instance.consumer = consumer
+                        }
                     }
                 } catch {
                     print(error)

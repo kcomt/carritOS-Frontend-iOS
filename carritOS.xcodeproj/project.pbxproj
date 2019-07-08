@@ -27,6 +27,8 @@
 		F45E021B22D2B3CC00C1E13A /* reviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021A22D2B3CC00C1E13A /* reviewResponse.swift */; };
 		F45E021D22D2CB4700C1E13A /* loginConsumerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021C22D2CB4700C1E13A /* loginConsumerController.swift */; };
 		F45E021F22D2F31600C1E13A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E021E22D2F31600C1E13A /* Token.swift */; };
+		F45E022522D333B200C1E13A /* addReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022422D333B200C1E13A /* addReviewController.swift */; };
+		F45E022722D361BB00C1E13A /* tabBarLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022622D361BB00C1E13A /* tabBarLogin.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		F45E021A22D2B3CC00C1E13A /* reviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewResponse.swift; sourceTree = "<group>"; };
 		F45E021C22D2CB4700C1E13A /* loginConsumerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginConsumerController.swift; sourceTree = "<group>"; };
 		F45E021E22D2F31600C1E13A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		F45E022422D333B200C1E13A /* addReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addReviewController.swift; sourceTree = "<group>"; };
+		F45E022622D361BB00C1E13A /* tabBarLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarLogin.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				F43B00C822C9798D007E07EB /* mapController.swift */,
 				F45E021822D15FFC00C1E13A /* reviewTableController.swift */,
 				F45E021C22D2CB4700C1E13A /* loginConsumerController.swift */,
+				F45E022422D333B200C1E13A /* addReviewController.swift */,
+				F45E022622D361BB00C1E13A /* tabBarLogin.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				F435BDAA22BECDC900084B0B /* Contract.swift in Sources */,
 				F45E021B22D2B3CC00C1E13A /* reviewResponse.swift in Sources */,
 				F43B00C922C9798D007E07EB /* mapController.swift in Sources */,
+				F45E022522D333B200C1E13A /* addReviewController.swift in Sources */,
+				F45E022722D361BB00C1E13A /* tabBarLogin.swift in Sources */,
 				F435BDAE22BECE7D00084B0B /* Sale.swift in Sources */,
 				F45E021F22D2F31600C1E13A /* Token.swift in Sources */,
 				F43B00C722C7E81C007E07EB /* detailViewController.swift in Sources */,

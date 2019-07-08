@@ -11,9 +11,9 @@ import Foundation
 import Foundation
 class Consumer : Codable
 {
-    var id: Int
-    var email: String
-    var name: String
-    var password: String
-    var username: String
+    var id: Int = 0
+    var email: String = ""
+    var name: String = ""
+    var password: String = ""
+    var username: String = ""
 }
