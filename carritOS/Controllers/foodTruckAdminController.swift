@@ -48,5 +48,21 @@ extension foodTruckAdminController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let foodTruck = foodTrucks[indexPath.row]
+        
+        let editAction = UITableViewRowAction(style: .default, title: "Edit"){
+            (action, indexPath) in
+            
+        }
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete"){
+            (action, indexPath) in
+
+        }
+        
+        deleteAction.backgroundColor = .red
+        editAction.backgroundColor = .yellow
+        
+        return [deleteAction, editAction]
+    }
 }

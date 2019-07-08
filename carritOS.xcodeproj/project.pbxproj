@@ -34,6 +34,8 @@
 		F45E022D22D378E300C1E13A /* reviewAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022C22D378E300C1E13A /* reviewAdminController.swift */; };
 		F45E022F22D378F300C1E13A /* sellerAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E022E22D378F300C1E13A /* sellerAdminController.swift */; };
 		F45E023122D3810900C1E13A /* adminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E023022D3810900C1E13A /* adminController.swift */; };
+		F45E023322D387F300C1E13A /* Seller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E023222D387F300C1E13A /* Seller.swift */; };
+		F45E023522D3880C00C1E13A /* sellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E023422D3880C00C1E13A /* sellerCell.swift */; };
 		F4D67AF022BDFE3400E1132F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */; };
 		F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67AF122BDFE3400E1132F /* ViewController.swift */; };
 		F4D67AF522BDFE3400E1132F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D67AF322BDFE3400E1132F /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		F45E022C22D378E300C1E13A /* reviewAdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewAdminController.swift; sourceTree = "<group>"; };
 		F45E022E22D378F300C1E13A /* sellerAdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sellerAdminController.swift; sourceTree = "<group>"; };
 		F45E023022D3810900C1E13A /* adminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminController.swift; sourceTree = "<group>"; };
+		F45E023222D387F300C1E13A /* Seller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seller.swift; sourceTree = "<group>"; };
+		F45E023422D3880C00C1E13A /* sellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sellerCell.swift; sourceTree = "<group>"; };
 		F4D67AEC22BDFE3400E1132F /* carritOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carritOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D67AEF22BDFE3400E1132F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D67AF122BDFE3400E1132F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				F43B00BD22C6BD58007E07EB /* foodTruckResponse.swift */,
 				F43B00C122C6E2E4007E07EB /* buisnessOwnerResponse.swift */,
 				F45E021A22D2B3CC00C1E13A /* reviewResponse.swift */,
+				F45E023422D3880C00C1E13A /* sellerCell.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				F435BDAD22BECE7D00084B0B /* Sale.swift */,
 				F43B00BF22C6E16F007E07EB /* BuisnessOwner.swift */,
 				F45E021422D158F200C1E13A /* Consumer.swift */,
+				F45E023222D387F300C1E13A /* Seller.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45E023522D3880C00C1E13A /* sellerCell.swift in Sources */,
 				F45E021522D158F200C1E13A /* Consumer.swift in Sources */,
 				F4D67AF222BDFE3400E1132F /* ViewController.swift in Sources */,
 				F43B00C022C6E16F007E07EB /* BuisnessOwner.swift in Sources */,
@@ -328,6 +335,7 @@
 				F43B00C222C6E2E4007E07EB /* buisnessOwnerResponse.swift in Sources */,
 				F45E021D22D2CB4700C1E13A /* loginConsumerController.swift in Sources */,
 				F435BDAC22BECDE900084B0B /* Review.swift in Sources */,
+				F45E023322D387F300C1E13A /* Seller.swift in Sources */,
 				F45E021722D15EEF00C1E13A /* reviewCell.swift in Sources */,
 				F43B00BA22C5E1ED007E07EB /* API.swift in Sources */,
 				F43B00B322C59949007E07EB /* foodTruckCell.swift in Sources */,
