@@ -54,4 +54,19 @@ class detailViewController: UIViewController
         guard let number = URL(string: "tel://" + textphoneLabel) else { return }
         UIApplication.shared.open(number)
     }
+    
+    func addReview(){
+        if API.instance.isAuthenticated == false{
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "showLogin", sender: self)
+            }
+        }
+        if API.instance.isAuthenticated == true {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "showAddReview", sender: self)
+            }
+        }
+    }
+    
+    
 }

@@ -14,6 +14,7 @@ class reviewTableController: UIViewController{
     var reviews: [Review] = [Review]()
     var selectedFoodTruck: FoodTruck?
     var id: String = ""
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,13 @@ class reviewTableController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         loadReviews()
     }
+    
+    @IBAction func addReview(_ sender: UIButton) {
+        if let parent = self.parent as? detailViewController {
+            parent.addReview()
+        }
+        
+    }
 }
 
 extension reviewTableController: UITableViewDelegate, UITableViewDataSource{
@@ -40,7 +48,6 @@ extension reviewTableController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(69)
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewCell
         // Configure the cell
         cell.update(from: reviews[indexPath.row])

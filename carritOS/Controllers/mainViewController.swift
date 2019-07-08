@@ -57,11 +57,13 @@ class mainViewController: UIViewController, UISearchDisplayDelegate, UISearchBar
                 let destinationViewController = segue.destination as! detailViewController
                 destinationViewController.selectedFoodTruck = self.foodTrucks[indexPath.row]
                 print(indexPath.row)
-                print(destinationViewController.selectedFoodTruck?.latitude)
-                print(destinationViewController.selectedFoodTruck?.longitude)
                 tableView.deselectRow(at: indexPath, animated: true)
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 
