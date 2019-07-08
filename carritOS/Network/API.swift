@@ -20,6 +20,7 @@ import Foundation
     
     var consumer: Consumer?
     var buisnessOwner: BuisnessOwner?
+    var seller: Seller?
     
     static let baseUrlString = "https://carritos-backend.herokuapp.com"
     
@@ -304,5 +305,12 @@ import Foundation
         }
         
         return payload
+    }
+    
+    func logout(){
+        API.instance.token = ""
+        API.instance.buisnessOwner = nil
+        API.instance.consumer = nil
+        API.instance.seller = nil
     }
 }

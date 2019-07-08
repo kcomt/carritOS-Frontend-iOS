@@ -41,4 +41,24 @@ class adminController: UIViewController {
             thirdView.alpha = 1
         }
     }
+    @IBAction func add(_ sender: UIBarButtonItem) {
+        if firstView.alpha ==  1
+        {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "addFoodTruck", sender: self)
+            }
+        }
+        if secondView.alpha ==  1
+        {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "addSeller", sender: self)
+            }
+        }
+    }
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        API.instance.logout()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "logout", sender: self)
+        }
+    }
 }

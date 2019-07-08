@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Sale : Codable
+{
+    var id: Int = 1
+    var total: Double = 0
+    var sellerId: Seller = Seller()
+    var summary: String = ""
+    var date: String = ""
+}

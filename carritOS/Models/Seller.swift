@@ -6,4 +6,12 @@
 //  Copyright © 2019 KcomtAlosilla. All rights reserved.
 //
 
-import Foundation
+class Seller : Codable
+{
+    var id: Int = 1
+    var name: String = ""
+    var password: String = ""
+    var username: String = ""
+    var buisnessOwnerId: BuisnessOwner = BuisnessOwner()
+    var dni: String = ""
+}

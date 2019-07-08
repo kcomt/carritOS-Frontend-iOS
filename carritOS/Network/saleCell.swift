@@ -1,5 +1,5 @@
 //
-//  sellerCell.swift
+//  saleCell.swift
 //  carritOS
 //
 //  Created by Maurilio Greggio Trujillo on 7/8/19.
@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class sellerCell: UITableViewCell {
+class saleCell: UITableViewCell {
     
-    var seller : Seller?
+    var sale : Sale?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func update(from seller: Seller) {
+    func update(from sale: Sale) {
     }
 }
